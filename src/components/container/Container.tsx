@@ -6,6 +6,7 @@ export default function Container() {
 	const [searchQuery, setSearchQuery] = useState<string>("");
 	const [pokemon, setPokemon] = useState<Pokemon | null>(null);
 	const [found, setFound] = useState<boolean>(true);
+	const [init, setInit] = useState<boolean>(true);
 	const url = "https://pokeapi.co/api/v2/pokemon/";
 
 	const handleQuery = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -36,19 +37,26 @@ export default function Container() {
 			};
 			setPokemon(temp);
 			setFound(true);
+			setInit(false);
 		} catch (error) {
 			setFound(false);
+			setInit(false);
 			console.error(error);
 		}
 	}
-
+	console.log(found + " " + init);
 	return (
 		<div className="flex flex-col h-[80vh] justify-center items-center w-full">
-			<div className="flex justify-center">
+			<div className="flex justify-center items-center text-center">
+				{init == true ? (
+					<p>Enter the name of a Pokémon or its ID number</p>
+				) : (
+					<></>
+				)}
 				{found == true ? (
 					<></>
 				) : (
-					<>Pokémon not found, try its ID number instead</>
+					<p>Pokémon not found, try its ID number instead</p>
 				)}
 				{pokemon != null && searchQuery != null && found == true ? (
 					<PokemonCard
