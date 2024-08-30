@@ -1,5 +1,5 @@
 import { Pokemon } from "../../interfaces/PokemonInterface";
-
+import { typeColors } from "../../components/PokemonCard/TypeColors";
 export default function PokemonCard(props: Pokemon) {
 	const capitlizeWord = (word: string) => {
 		return word.charAt(0).toUpperCase() + word.slice(1);
@@ -23,16 +23,22 @@ export default function PokemonCard(props: Pokemon) {
 	function displayTypes() {
 		if (pokemonTypes.length == 1) {
 			return pokemonTypes.map((type) => (
-				<p key={type}>Type: {capitlizeWord(type)}</p>
+				<p key={type} className={`${typeColors[type]} font-semibold`}>
+					Type: {capitlizeWord(type)}
+				</p>
 			));
 		}
 		if (pokemonTypes.length == 2) {
 			return (
 				<div>
-					<p>
-						Type: {capitlizeWord(pokemonTypes[0])} and{" "}
+					<span>Type: </span>
+					<span className={`${typeColors[pokemonTypes[0]]} font-semibold`}>
+						{capitlizeWord(pokemonTypes[0])}
+					</span>
+					<span> and </span>
+					<span className={`${typeColors[pokemonTypes[1]]} font-semibold`}>
 						{capitlizeWord(pokemonTypes[1])}
-					</p>
+					</span>
 				</div>
 			);
 		}
@@ -43,17 +49,17 @@ export default function PokemonCard(props: Pokemon) {
 			<div className="text-center text-4xl">{pokemonName}</div>
 			<div className="text-center text-2xl">ID: {props.id}</div>
 
-			<div className="text-xl">
-				Height: {convertHeight()} | Weight: {convertWeight()}
+			<div className="text-xl text-balance text-center">
+				Height: {convertHeight()} Weight: {convertWeight()}
 			</div>
 			<div className="flex flex-row mb-2">{displayTypes()}</div>
 			<div className="flex flex-row gap-2">
 				<img
-					className="w-32 border-2 rounded-3xl bg-white"
+					className="w-32 sm:w-40 border-2 rounded-3xl bg-white transition duration-300 hover:scale-105"
 					src={props.sprite}
 				></img>
 				<img
-					className="w-32 border-2 rounded-3xl bg-white"
+					className="w-32 sm:w-40 border-2 rounded-3xl bg-white transition duration-300 hover:scale-105"
 					src={props.shinySprite}
 				></img>
 			</div>

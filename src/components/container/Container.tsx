@@ -43,7 +43,7 @@ export default function Container() {
 	}
 
 	return (
-		<div className="flex flex-col h-[80vh] justify-center items-center">
+		<div className="flex flex-col h-[80vh] justify-center items-center w-full">
 			<div className="flex justify-center">
 				{found == true ? (
 					<></>
