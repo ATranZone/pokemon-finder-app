@@ -8,3 +8,9 @@ export interface Pokemon {
 	types: string[];
 	cries: string;
 }
+
+export interface PokemonType {
+	type: {
+		name: string;
+	};
+}

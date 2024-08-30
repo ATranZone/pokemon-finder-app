@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Pokemon } from "../../interfaces/PokemonInterface.tsx";
+import { Pokemon, PokemonType } from "../../interfaces/PokemonInterface.tsx";
 import PokemonCard from "../../components/PokemonCard/PokemonCard.tsx";
 
 export default function Container() {
@@ -22,7 +22,8 @@ export default function Container() {
 			}
 			const data = await response.json();
 			const pokeTypes: string[] = [];
-			data.types.forEach((e: string) => pokeTypes.push(e.type.name));
+			data.types.forEach((e: PokemonType) => pokeTypes.push(e.type.name));
+
 			const temp: Pokemon = {
 				id: data.id,
 				name: data.name,
