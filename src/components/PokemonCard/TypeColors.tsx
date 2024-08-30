@@ -13,7 +13,7 @@ export const typeColors: { [key: string]: string } = {
 	rock: "text-gray-500",
 	ghost: "text-purple-700",
 	dragon: "text-indigo-500",
-	dark: "text-gray-800",
+	dark: "text-gray-600",
 	steel: "text-gray-600",
 	fairy: "text-pink-300",
 	normal: "text-gray-400",
