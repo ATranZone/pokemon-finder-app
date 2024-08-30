@@ -4,10 +4,12 @@ import Container from "./components/container/Container";
 
 function App() {
 	return (
-		<>
+		<div>
 			<Header />
-			<Container />
-		</>
+			<div className="flex flex-col justify-center items-center">
+				<Container />
+			</div>
+		</div>
 	);
 }
 
