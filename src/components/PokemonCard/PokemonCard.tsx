@@ -67,10 +67,10 @@ export default function PokemonCard(props: Pokemon) {
 			<div className="flex flex-row border-2 bg-white rounded-md w-[240px] h-full sm:w-[450px] sm:h-[200px] justify-around items-center transition duration-300 hover:scale-105">
 				<img className="sm:w-32" src={props.sprite}></img>
 
-				<div className="flex flex-col justify-evenly sm:size-60">
+				<div className="flex flex-col justify-evenly sm:w-60 sm:h-[200px]">
 					<div className="flex flex-col border-black border-[1px] rounded-lg">
-						<div className="flex flex-row gap-2 justify-center rounded-t-md bg-gradient-to-b from-red-500 to-white">
-							<img className="w-5" src="../src/assets/pokeball2.svg"></img>
+						<div className="flex flex-row gap-2 justify-center items-center rounded-t-md bg-gradient-to-b from-red-500 to-white">
+							<img className="w-5 h-5" src="../src/assets/pokeball.png"></img>
 							<span className="font-semibold font-pixel text-black">
 								No. {props.id}
 							</span>
