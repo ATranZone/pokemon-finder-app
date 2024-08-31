@@ -70,7 +70,7 @@ export default function PokemonCard(props: Pokemon) {
 				<div className="flex flex-col justify-evenly sm:size-60">
 					<div className="flex flex-col border-black border-[1px] rounded-lg">
 						<div className="flex flex-row gap-2 justify-center rounded-t-md bg-gradient-to-b from-red-500 to-white">
-							<img className="w-5" src="./public/pokeball.svg"></img>
+							<img className="w-5" src="../src/assets/pokeball2.svg"></img>
 							<span className="font-semibold font-pixel text-black">
 								No. {props.id}
 							</span>
@@ -84,7 +84,7 @@ export default function PokemonCard(props: Pokemon) {
 
 					<div className="flex flex-row sm:w-[100%]">{displayTypes()}</div>
 
-					<div className="flex flex-col bg-white border-black border-[1px] rounded-lg sm:shadow-[5px_5px_7px_0px_#a0aec0] sm:w-[75%] sm:ml-[20%]">
+					<div className="flex flex-col bg-white border-black border-[1px] rounded-lg sm:w-[75%] sm:ml-[20%]">
 						<span className="flex flex-row justify-between border-black border-b-[1px] border-dotted">
 							<span className="font-semibold font-pixel ml-4 text-black">
 								HT
