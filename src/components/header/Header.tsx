@@ -4,7 +4,7 @@ export default function Header() {
 			<h1 className="text-6xl font-semibold text-black">
 				<a>
 					<img
-						className="w-64 sm:w-80 md:w-[612px]"
+						className="w-64 sm:w-[580px]"
 						src="https://fontmeme.com/permalink/240830/46d8f613ab78a30ea614b2c0da025afe.png"
 						alt="pokemon-font"
 					></img>

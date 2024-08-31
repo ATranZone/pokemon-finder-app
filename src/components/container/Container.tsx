@@ -49,14 +49,18 @@ export default function Container() {
 		<div className="flex flex-col h-[80vh] justify-center items-center w-full">
 			<div className="flex justify-center items-center text-center">
 				{init == true ? (
-					<p>Enter the name of a Pokémon or its ID number</p>
+					<p className="text-2xl font-pixel">
+						Enter the name of a Pokemon or its ID number
+					</p>
 				) : (
 					<></>
 				)}
 				{found == true ? (
 					<></>
 				) : (
-					<p>Pokémon not found, try its ID number instead</p>
+					<p className="text-2xl font-pixel">
+						Pokemon not found, try its ID number instead
+					</p>
 				)}
 				{pokemon != null && searchQuery != null && found == true ? (
 					<PokemonCard
@@ -75,7 +79,7 @@ export default function Container() {
 			</div>
 			<div className="flex flex-row justify-center m-4 items-center gap-1">
 				<input
-					className="w-32 border-2 text-black"
+					className="w-32 border-2 font-semibold font-pixel text-black rounded-lg indent-2"
 					type="text"
 					spellCheck="false"
 					//if the user presses the ENTER key, run fetchPokemon() to find whatever they typed in
@@ -88,7 +92,7 @@ export default function Container() {
 					onChange={handleQuery}
 				></input>
 				<button
-					className="border-2 w-20 bg-white text-black"
+					className="border-2 w-20 bg-white text-black font-pixel font-semibold rounded-lg"
 					onClick={() => fetchPokemon()}
 				>
 					SEARCH
