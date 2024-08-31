@@ -1,5 +1,6 @@
 import { Pokemon } from "../../interfaces/PokemonInterface";
 import { typeColors } from "../../components/PokemonCard/TypeColors";
+import Path from "../../assets/pokeball2.svg";
 export default function PokemonCard(props: Pokemon) {
 	const capitlizeWord = (word: string) => {
 		return word.charAt(0).toUpperCase() + word.slice(1);
@@ -70,7 +71,7 @@ export default function PokemonCard(props: Pokemon) {
 				<div className="flex flex-col justify-evenly sm:w-60 sm:h-[200px]">
 					<div className="flex flex-col border-black border-[1px] rounded-lg">
 						<div className="flex flex-row gap-2 justify-center items-center rounded-t-md bg-gradient-to-b from-red-500 to-white">
-							<img className="w-5 h-5" src="../src/assets/pokeball.png"></img>
+							<img className="w-5 h-5" src={Path}></img>
 							<span className="font-semibold font-pixel text-black">
 								No. {props.id}
 							</span>
