@@ -32,7 +32,6 @@ You can use the Pokémon Search App directly by visiting the following link: [Po
 - ReactJS
 - TypeScript
 - TailwindCSS
-- Node
 
 ## Images
 <img src="https://github.com/user-attachments/assets/6fbfd6fd-f122-4317-9f09-4a81d6142213" width=500px>
